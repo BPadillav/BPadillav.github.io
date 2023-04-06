@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video de Fondo</title>
+  <!-- Agrega los estilos CSS en el encabezado o en un archivo externo -->
+  <style>
+    /* Establecer el video como fondo ocupando toda la pantalla */
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Estilo opcional para el contenido en la página */
+    #contenido {
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- El video de fondo -->
+  <video id="video-fondo" autoplay loop muted>
+    <source src="ruta-al-video/video.mp4" type="video/mp4">
+    <!-- Agregar más formatos de video aquí para mayor compatibilidad -->
+  </video>
+  <!-- El contenido de la página -->
+  <div id="contenido">
+    <h1>Video de Fondo</h1>
+    <p>Contenido de ejemplo</p>
+  </div>
+</body>
+</html>
