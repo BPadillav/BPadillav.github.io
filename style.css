@@ -1,0 +1,12 @@
+body {
+  /* Establece la imagen de fondo */
+  background-image: url("https://fotografias.lasexta.com/clipping/cmsimages01/2020/05/08/E3BC9A26-F5D7-4B1D-9497-72A52CE9CB79/97.jpg?crop=1300,731,x0,y19&width=1600&height=900&optimize=high&format=webply");
+  /* Ajusta el tamaño y posición de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  /* Establece una altura mínima para la página */
+  min-height: 100vh;
+  /* Agrega estilos adicionales para el contenido de la página */
+  color:black;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+}
