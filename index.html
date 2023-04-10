@@ -1,79 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
-
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Ejemplo HTML5</title>
+  <title>Galería de Fotos</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Language" content="es">
+  <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos CSS -->
+  <script src="script.js"></script> <!-- Archivo de script JavaScript -->
 </head>
-<body>
-  <header>
-    <h1>Nombre del Sitio</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#acerca-de">Acerca de</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>  
+  <nav>
+    <a href="/" aria-current="page">Fotos</a>
+    <a href="/page2.html">Other page</a>
+  </nav>
+  <div class="portada">
+    <h1 class="titulo"><span><center>Esta es mi Galería de Fotos
+    </center></span></h1>
+  </div>
+  <div class="galeria">
   
-  <main>
-    <section id="inicio">
-      <h2>Sección de Inicio</h2>
-      <p>Bienvenido a nuestro sitio web. Aquí encontrarás información sobre nuestros productos y servicios.</p>
-      <img src="imagen1.jpg" alt="Imagen de ejemplo">
-    </section>
-    
-    <section id="acerca-de">
-      <h2>Acerca de Nosotros</h2>
-      <article>
-        <h3>Nuestra Historia</h3>
-        <p>Somos una empresa fundada en 2020 con la visión de ofrecer productos de alta calidad a nuestros clientes.</p>
-      </article>
-      <aside>
-        <h3>Misión</h3>
-        <p>Nuestra misión es proporcionar soluciones innovadoras y satisfacer las necesidades de nuestros clientes.</p>
-      </aside>
-    </section>
-    
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-        <input type="submit" value="Enviar">
-      </form>
-    </section>
-  </main>
+  </div>
+  <center><section>
+
+  <img src="https://www.dogalize.com/wp-content/uploads/2017/06/La-sverminazione-e-la-pulizia-del-cucciolo-del-cane-2-800x400-800x400.jpg" alt="Foto 1" >
+  <img src="https://lumiere-a.akamaihd.net/v1/images/stitch_2_fe569138.png" alt="Foto 2" >
+  <img src="https://img.interempresas.net/fotos/2730189.png" alt="Foto 3" >
+  <img src="https://pics.filmaffinity.com/gravity_falls-520037458-large.jpg" alt="Foto 4" >
+  <img src="https://static.tvtropes.org/pmwiki/pub/images/miraculous_1.png" alt="Foto 5" >
+  <img src="https://cdn.vox-cdn.com/thumbor/vBUD9las6EhW18GidcwTGM-3WiU=/0x0:1920x1080/920x613/filters:focal(807x387:1113x693):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/71862531/phineas___ferb.0.jpg" alt="Foto 6" >
+  </section></center>
+  <!-- Estilos CSS -->
+
   
-  <footer>
-    <p>Derechos de Autor &copy; 2023. Todos los derechos reservados.</p>
-  </footer>
+ <center> <audio src="https://www.youtube.com/watch?v=rcJPflEnlTw" autoplay loop controls>
+  </audio></center>
+
+<style>
+    .galeria {
+      display: flex;
+      justify-content: center;
+    }
+
+    .foto {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .foto:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <!-- Script JavaScript -->
+  <script>
+    // Script para la animación del título
+    const titulo = document.querySelector('.titulo span');
+    titulo.addEventListener('mouseover', () => {
+      titulo.style.animation = 'animacion 0.5s infinite';
+    });
+    titulo.addEventListener('mouseout', () => {
+      titulo.style.animation = '';
+    });
+  </script>
+
+
 </body>
 </html>

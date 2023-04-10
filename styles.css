@@ -1,12 +1,78 @@
-* {
-  box-sizing: border-box;
+body {
+  /* Establece la imagen de fondo */
+  background-image: url("https://viajes.nationalgeographic.com.es/medio/2019/08/23/en-el-x-gyeongju_ae621932_1254x836.jpg");
+  /* Ajusta el tamaño y posición de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  /* Establece una altura mínima para la página */
+  min-height: 100vh;
+  /* Agrega estilos adicionales para el contenido de la página */
+  color: aqua;
+  font-family: Arial, sans-serif;
 }
+section{
+  display:flex;
+  width: 600px;
+  height: 430px;
+}
+
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;    
+}
+
+section img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.portada {
+    width: 100%;
+    height: 20vh;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+   overflow: hidden;
+  }
+
+  .titulo {
+    font-size: 48px;
+   text-align: center;
+    color: antiquewhite;
+  }
+
+  .titulo span {
+    display: inline-block;
+    animation: animacion 3s infinite;
+  }
+
+  /* Animación */
+  @keyframes animacion {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+/** {
+  box-sizing: border-box;
+}*/
 
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  color: rgb(17, 192, 134);
+  background-color: rgb(255, 255, 255);
 }
 
 nav {
@@ -16,8 +82,8 @@ nav {
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+  border-bottom: solid 1px #fff;
+  background-color:darkslateblue;
 }
 
 nav a {
@@ -28,7 +94,7 @@ nav a {
   border: solid 1px #aaa;
   text-align: center;
   text-decoration: none;
-  color: #555;
+  color:rgb(4, 4, 5);
 }
 
 nav a[aria-current='page'] {
@@ -49,15 +115,7 @@ body {
   margin: 0;
   overflow: hidden;
 }
-#video-fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
+
 /* Estilo opcional para el contenido en la página */
 #contenido {
   padding: 20px;
