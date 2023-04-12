@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Galería de Fotos</title>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Language" content="es">
-  <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos CSS -->
-  <script src="script.js"></script> <!-- Archivo de script JavaScript -->
-</head>
-<body>  
-  <nav>
-    <a href="/" aria-current="page">Fotos</a>
-    <a href="/page2.html">Pagina Web Rotatoria</a>
-    <a href="/nube.html">Nube</a>
-  </nav>
-  <div class="portada">
-    <h1 class="titulo"><span><center>Esta es mi Galería de Fotos
-    </center></span></h1>
-  </div>
-  <div class="galeria">
-  
-  </div>
-  <center><section>
+  <head>
+    <title>Galería de Fotos</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="es" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Archivo de estilos CSS -->
+    <script src="script.js"></script>
+    <!-- Archivo de script JavaScript -->
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Fotos</a>
+      <a href="/page2.html">Pagina Web Rotatoria</a>
+      <a href="/burbujas.html">Nube</a>
+    </nav>
+    <div class="portada">
+      <h1 class="titulo">
+        <span><center>Esta es mi Galería de Fotos</center></span>
+      </h1>
+    </div>
+    <div class="galeria"></div>
+    <center>
+      <section>
+        <img
+          src="https://www.dogalize.com/wp-content/uploads/2017/06/La-sverminazione-e-la-pulizia-del-cucciolo-del-cane-2-800x400-800x400.jpg"
+          alt="Foto 1"
+        />
+        <img
+          src="https://lumiere-a.akamaihd.net/v1/images/stitch_2_fe569138.png"
+          alt="Foto 2"
+        />
+        <img
+          src="https://img.interempresas.net/fotos/2730189.png"
+          alt="Foto 3"
+        />
+        <img
+          src="https://pics.filmaffinity.com/gravity_falls-520037458-large.jpg"
+          alt="Foto 4"
+        />
+        <img
+          src="https://static.tvtropes.org/pmwiki/pub/images/miraculous_1.png"
+          alt="Foto 5"
+        />
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/vBUD9las6EhW18GidcwTGM-3WiU=/0x0:1920x1080/920x613/filters:focal(807x387:1113x693):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/71862531/phineas___ferb.0.jpg"
+          alt="Foto 6"
+        />
+      </section>
+    </center>
+    <!-- Estilos CSS -->
 
-  <img src="https://www.dogalize.com/wp-content/uploads/2017/06/La-sverminazione-e-la-pulizia-del-cucciolo-del-cane-2-800x400-800x400.jpg" alt="Foto 1" >
-  <img src="https://lumiere-a.akamaihd.net/v1/images/stitch_2_fe569138.png" alt="Foto 2" >
-  <img src="https://img.interempresas.net/fotos/2730189.png" alt="Foto 3" >
-  <img src="https://pics.filmaffinity.com/gravity_falls-520037458-large.jpg" alt="Foto 4" >
-  <img src="https://static.tvtropes.org/pmwiki/pub/images/miraculous_1.png" alt="Foto 5" >
-  <img src="https://cdn.vox-cdn.com/thumbor/vBUD9las6EhW18GidcwTGM-3WiU=/0x0:1920x1080/920x613/filters:focal(807x387:1113x693):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/71862531/phineas___ferb.0.jpg" alt="Foto 6" >
-  </section></center>
-  <!-- Estilos CSS -->
+    <audio autoplay muted loop>
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.ogg"
+        type="audio/mpeg"
+      />
+      <source
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        type="audio/mpeg"
+      />
+    </audio>
+    <style>
+      .galeria {
+        display: flex;
+        justify-content: center;
+      }
 
-  
-  <audio autoplay muted loop>
-    <source src="https://www.w3schools.com/html/mov_bbb.ogg"  type="audio/mpeg">
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="audio/mpeg">
-	</audio>
-<style>
-    .galeria {
-      display: flex;
-      justify-content: center;
-    }
+      .foto {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
 
-    .foto {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      margin: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
+      .foto:hover {
+        transform: scale(1.1);
+      }
+    </style>
 
-    .foto:hover {
-      transform: scale(1.1);
-    }
-  </style>
-
-  <!-- Script JavaScript -->
-  <script>
-    // Script para la animación del título
-    const titulo = document.querySelector('.titulo span');
-    titulo.addEventListener('mouseover', () => {
-      titulo.style.animation = 'animacion 0.5s infinite';
-    });
-    titulo.addEventListener('mouseout', () => {
-      titulo.style.animation = '';
-    });
-  </script>
-
-
-</body>
+    <!-- Script JavaScript -->
+    <script>
+      // Script para la animación del título
+      const titulo = document.querySelector('.titulo span');
+      titulo.addEventListener('mouseover', () => {
+        titulo.style.animation = 'animacion 0.5s infinite';
+      });
+      titulo.addEventListener('mouseout', () => {
+        titulo.style.animation = '';
+      });
+    </script>
+  </body>
 </html>
