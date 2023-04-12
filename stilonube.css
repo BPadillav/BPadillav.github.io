@@ -1,18 +1,48 @@
-.cloud {
-  width: 100px;
-  height: 50px;
-  background-color: #fff;
-  border-radius: 50px;
-  position: relative;
+body {
+  margin: 0;
   overflow: hidden;
-  animation: float 5s infinite linear; /* Define la animación */
+  background-color: #87ceeb;
+  height: 100vh;
 }
 
-@keyframes float {
+.cloud {
+  width: 200px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: -200px;
+  animation: moveCloud 5s linear infinite;
+}
+
+.cloud::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: -50px;
+}
+
+.cloud::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+
+@keyframes moveCloud {
   0% {
-    transform: translateX(-100%); /* Define la posición inicial */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(100%); /* Define la posición final */
+    transform: translateX(100vw);
   }
 }
