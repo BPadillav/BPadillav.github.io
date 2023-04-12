@@ -46,3 +46,24 @@ body {
     transform: translateX(100vw);
   }
 }
+.cloud {
+  width: 70%; /* Ajusta el ancho para que ocupe toda la página */
+  height: 70%; /* Ajusta la altura para que ocupe toda la página */
+  background-color: #fff;
+  border-radius: 50px;
+  position: fixed; /* Utiliza position: fixed para que el elemento se mantenga fijo en la ventana del navegador */
+  top: 0; /* Ajusta la posición en la parte superior de la ventana del navegador */
+  left: 0; /* Ajusta la posición en la parte izquierda de la ventana del navegador */
+  overflow: hidden;
+  animation: float 5s infinite linear; /* Define la animación */
+  z-index: -1; /* Establece un valor de z-index negativo para que el elemento esté detrás del contenido de la página */
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-90%); /* Define la posición inicial */
+  }
+  100% {
+    transform: translateX(90%); /* Define la posición final */
+  }
+}
