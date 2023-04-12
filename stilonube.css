@@ -1,69 +1,45 @@
-body {
-  margin: 0;
+
+.cloud-container {
+  width: 100%; /* Ajusta el ancho para que ocupe toda la página */
+  height: 100%; /* Ajusta la altura para que ocupe toda la página */
+  position: fixed; /* Utiliza position: fixed para que el elemento se mantenga fijo en la ventana del navegador */
+  top: 0; /* Ajusta la posición en la parte superior de la ventana del navegador */
+  left: 0; /* Ajusta la posición en la parte izquierda de la ventana del navegador */
   overflow: hidden;
-  background-color: #87ceeb;
-  height: 100vh;
+  z-index: -1; /* Establece un valor de z-index negativo para que el elemento esté detrás del contenido de la página */
 }
 
 .cloud {
   width: 200px;
   height: 100px;
-  background-color: #ffffff;
-  border-radius: 50px;
-  position: absolute;
-  top: 50%;
-  left: -200px;
-  animation: moveCloud 5s linear infinite;
-}
-
-.cloud::before {
-  content: '';
-  width: 100px;
-  height: 100px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  left: 50px;
-  top: -50px;
-}
-
-.cloud::after {
-  content: '';
-  width: 150px;
-  height: 150px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  left: 25px;
-  top: 25px;
-}
-
-@keyframes moveCloud {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100vw); 
-  }
-}
-.cloud {
-  width: 70%; /* Ajusta el ancho para que ocupe toda la página */
-  height: 70%; /* Ajusta la altura para que ocupe toda la página */
   background-color: #fff;
   border-radius: 50px;
-  position: fixed; /* Utiliza position: fixed para que el elemento se mantenga fijo en la ventana del navegador */
-  top: 0; /* Ajusta la posición en la parte superior de la ventana del navegador */
-  left: 0; /* Ajusta la posición en la parte izquierda de la ventana del navegador */
-  overflow: hidden;
-  animation: float 5s infinite linear; /* Define la animación */
-  z-index: -1; /* Establece un valor de z-index negativo para que el elemento esté detrás del contenido de la página */
+  position: absolute; /* Utiliza position: absolute para posicionar las nubes dentro del contenedor */
+  top: 50%; /* Centra verticalmente las nubes */
+  animation: float 10s infinite linear; /* Define la animación */
+  transform-origin: left center; /* Establece el origen de transformación en la parte izquierda del centro de las nubes */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7); /* Agrega un suave efecto de sombra a las nubes */
+}
+
+.cloud:nth-child(1) {
+  left: -200px; /* Inicia la primera nube fuera del contenedor en la parte izquierda */
+}
+
+.cloud:nth-child(2) {
+  left: -400px; /* Inicia la segunda nube fuera del contenedor en la parte izquierda */
+  animation-delay: 2s; /* Agrega un retraso de 2 segundos a la animación de la segunda nube */
+}
+
+.cloud:nth-child(3) {
+  left: -600px; /* Inicia la tercera nube fuera del contenedor en la parte izquierda */
+  animation-delay: 4s; /* Agrega un retraso de 4 segundos a la animación de la tercera nube */
 }
 
 @keyframes float {
   0% {
-    transform: translateX(-90%); /* Define la posición inicial */
+    transform: translateX(-100%); /* Define la posición inicial */
   }
   100% {
-    transform: translateX(90%); /* Define la posición final */
+    transform: translateX(100%); /* Define la posición final */
   }
 }
